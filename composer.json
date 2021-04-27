@@ -1,0 +1,11 @@
+{
+    "name": "dusansparavalo/vivify-test",
+    "description": "Game for vivify ideas code test",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
