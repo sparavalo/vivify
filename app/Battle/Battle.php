@@ -56,11 +56,19 @@ class Battle implements BattleInterface
     {
         $this->firstAttack();
 
-        var_dump($this->attacker);
-        var_dump($this->defender);
-
         while ($this->endOfBattle()) {
             $this->attack();
+        }
+
+        $this->checkWinner();
+    }
+
+    private function checkWinner()
+    {
+        if ($this->defender->getHealth() <= 0) {
+            var_dump($this->attacker->getName() . ' je pobedio u duelu sa ' . $this->defender->getName());
+        } else if ($this->attacker->getHealth() <= 0){
+            var_dump($this->defender->getName() . ' je pobedio u duelu sa ' . $this->attacker->getName());
         }
     }
 
